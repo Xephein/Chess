@@ -1,3 +1,20 @@
+class piece:
+    def __init__(self, color, position):
+        self.color = color
+        self.position = position
+
+class slidingPiece(piece):
+    def __init__(self, move, color, position, possibleSlidingMoves):
+        piece.__init__(self, color, position)
+        self.move = move
+        self.possibleMoves = possibleSlidingMoves
+
+class hoppingPiece(piece):
+    def __init__(self, move, color, position, possibleHoppingMoves):
+        piece.__init__(self, color, position)
+        self.move = move
+        self.possibleMoves = possibleHoppingMoves
+
 LINES = {
     "a": 0,
     "b": 1,
